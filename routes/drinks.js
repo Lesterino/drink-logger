@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const drinksCtrl = require('../controllers/drinks')
 
-/* GET users listing. */
 router.get('/', drinksCtrl.index);
+router.new('/new', drinksCtrl.new);
+
 module.exports = router;

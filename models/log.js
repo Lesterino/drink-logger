@@ -6,5 +6,10 @@ const drinkLog = new Schema ({
         type: Array,
         default: ["n/a"]
     },
-
-})
+    date: {
+        type: Date,
+        default: () => {
+            return new Date()(+new Date())
+        }
+    }
+});

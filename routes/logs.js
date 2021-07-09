@@ -6,5 +6,6 @@ const logsCtrl = require('../controllers/logs');
 router.get('/', logsCtrl.index);
 router.get('/new', logsCtrl.new);
 router.post('/', logsCtrl.create);
+router.get('/:id', logsCtrl.show);
 
-module.imports = router;
+module.exports = router;

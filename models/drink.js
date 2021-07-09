@@ -10,7 +10,8 @@ const drinkSchema = new Schema ({
         ref: "Ingredient"
     },
     preparation: {
-        type: String
+        type: String,
+        default: "N/A"
     },
     type: {
         type: String,
