@@ -2,7 +2,7 @@ const Log = require('../models/log')
 
 const index = (req, res) => {
     Log.find({}, (err, logs) => {
-        res.render('drinks/index', {
+        res.render('logs/index', {
             logs
         });
     });
@@ -10,7 +10,7 @@ const index = (req, res) => {
 
 module.exports = {
     index,
-    new: newDrink,
+    new: newLog,
     create,
     show
 }
