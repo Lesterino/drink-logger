@@ -1,4 +1,4 @@
-const Drink = require('../models/drink')
+const Drink = require('../models/log')
 
 const index = (req, res) => {
     Drink.find({}, (err, logs) => {

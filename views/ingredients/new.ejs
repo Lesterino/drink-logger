@@ -1,0 +1,58 @@
+<%- include('../partials/header') %>
+<h2>Enter a New Ingredient</h2>
+<form action="/flights" method="POST">
+  <label>
+    Hard Liquor:
+    <select name="hardLiquor">
+      <option value="American">American</option>
+      <option value="Southwest">Southwest</option>
+      <option value="United">United</option>
+    </select>
+  </label>
+  <br />
+  <label>
+    Non-alcoholic:
+    <select name="nonAlcoholic">
+      <option value="AUS">AUS</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+    </select>
+  </label>
+  <br />
+  <label>
+    Bitters:
+    <select name="bitters">
+      <option value="AUS">AUS</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+    </select>
+  </label>
+  <br />
+  <label>
+    Garnish:
+    <select name="garnish">
+      <option value="AUS">AUS</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+    </select>
+  </label>
+  <br />
+  <label>
+    Others:
+    <select name="garnish">
+      <option value="AUS">AUS</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+    </select>
+  </label>
+  <br />
+  <input type="submit" value="Add Ingredient" />
+</form>
