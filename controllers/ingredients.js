@@ -9,10 +9,10 @@ const index = async(req, res) => {
     }
 }
 
-const create = async(req, res) => {
-    const rq = req.body;
+// const create = async(req, res) => {
+//     const rq = req.body;
     
-}
+// }
 
 module.exports = {
     index,
