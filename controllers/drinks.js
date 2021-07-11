@@ -1,4 +1,4 @@
-const Drink = require('../models/log')
+const Drink = require('../models/drink')
 
 const index = (req, res) => {
     Drink.find({}, (err, logs) => {
@@ -10,7 +10,7 @@ const index = (req, res) => {
 
 module.exports = {
     index,
-    new: newDrink,
-    create,
-    show
+    // new: newDrink,
+    // create,
+    // show
 }

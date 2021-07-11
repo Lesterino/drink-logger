@@ -10,7 +10,7 @@ const index = (req, res) => {
 
 module.exports = {
     index,
-    new: newLog,
-    create,
-    show
+    // new: newLog,
+    // create,
+    // show
 }

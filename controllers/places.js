@@ -1,4 +1,4 @@
-const Place = require('../models/place')
+const Place = require('../models/drink')
 
 const index = (req, res) => {
     Place.find({}, (err, Places) => {
@@ -10,7 +10,7 @@ const index = (req, res) => {
 
 module.exports = {
     index,
-    new: newPlace,
-    create,
-    show
+    // new: newPlace,
+    // create,
+    // show
 }

@@ -1,4 +1,4 @@
-const Ingredient = require('../models/ingredient')
+const Ingredient = require('../models/drink')
 
 const index = async(req, res) => {
     try {
@@ -16,7 +16,7 @@ const index = async(req, res) => {
 
 module.exports = {
     index,
-    new: newIngredient,
-    create,
-    show
+    // new: newIngredient,
+    // create,
+    // show
 }

@@ -3,35 +3,30 @@ const Schema = mongoose.Schema;
 
 let hlEnum = ["Whiskey", "Tequila", "Vodka", "Gin", "Brandy", "Rum"];
 let gEnum = ["Olive", "Orange Peel", "Mint", "Lime"];
-let naEnum = [];
-let bEnum = [];
-let oEnum = [];
+let naEnum = ['h'];
+let bEnum = ['h'];
+let oEnum = ['h'];
 
 const ingredientSchema = new Schema ({
     type: Object,
     hardLiquor: {
         type: Array,
-        enum: hlEnum,
         default: ["None"]
     },
     nonAlc: {
         type: Array,
-        enum: naEnum,
         default: ["None"]
     },
     bitters: {
         type: Array,
-        enum: bEnum,
         default: ["None"]
     },
     garnish: {
         type: Array,
-        enum: gEnum,
         default: ["None"]
     },
     other: {
         type: Array,
-        enum: oEnum,
         default: ["None"]
     }
 });
