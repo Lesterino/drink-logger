@@ -8,6 +8,7 @@ let bEnum = [];
 let oEnum = [];
 
 const ingredientSchema = new Schema ({
+    type: Object,
     hardLiquor: {
         type: Array,
         enum: hlEnum,
@@ -36,6 +37,7 @@ const ingredientSchema = new Schema ({
 });
 
 const placeSchema = new Schema ({
+    type: Object,
     name: {
         type: String,
         default: "N/A"
@@ -47,7 +49,8 @@ const placeSchema = new Schema ({
 })
 
 const drinkSchema = new Schema ({
-    ingredients: [ingredientSchema],
+    type: Object,
+    ingredients: ingredientSchema,
     preparation: {
         type: String,
         default: "N/A"
@@ -55,4 +58,4 @@ const drinkSchema = new Schema ({
     place: placeSchema
 })
 
-module.exports = mongoose.model("Ingredient", ingredientSchema);
+module.exports = mongoose.model("Drink", drinkSchema);
