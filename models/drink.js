@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
+const ingr = require('../models/ingredient');
 const Schema = mongoose.Schema;
-
-let hlEnum = ["Whiskey", "Tequila", "Vodka", "Gin", "Brandy", "Rum"];
-let gEnum = ["Olive", "Orange Peel", "Mint", "Lime"];
-let naEnum = ['h'];
-let bEnum = ['h'];
-let oEnum = ['h'];
 
 const ingredientSchema = new Schema ({
     type: Object,

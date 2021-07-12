@@ -1,2 +1,42 @@
 <%- include('../partials/header') %>
+<h3>Hard Liquor</h3>
+<div>
+    <% allIngr.hardLiquor.forEach((hl) => { %> 
+    <ul>
+        <li> <%= hl %> </li>
+    </ul>
+    <% }); %>
+</div>
+<h3>Non-alcoholic</h3>
+<div>
+    <% allIngr.nonAlc.forEach((hl) => { %> 
+    <ul>
+        <li> <%= hl %> </li>
+    </ul>
+    <% }); %>
+</div>
+<h3>Bitters</h3>
+<div>
+    <% allIngr.bitters.forEach((hl) => { %> 
+    <ul>
+        <li> <%= hl %> </li>
+    </ul>
+    <% }); %>
+</div>
+<h3>Garnishes</h3>
+<div>
+    <% allIngr.garnish.forEach((hl) => { %> 
+    <ul>
+        <li> <%= hl %> </li>
+    </ul>
+    <% }); %>
+</div>
+<h3>Other</h3>
+<div>
+    <% allIngr.other.forEach((hl) => { %> 
+    <ul>
+        <li> <%= hl %> </li>
+    </ul>
+    <% }); %>
+</div>
 <%- include('../partials/footer') %>
