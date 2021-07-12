@@ -1,3 +1,15 @@
 <%- include('../partials/header') %>
-
+<h3>Drinks</h3>
+<div>
+    <% drinks.forEach((d) => { %>
+        <ul>
+            <li>
+                <%= `Name -- ${d.name}\n %>
+                <%= `Ingredients -- ${d.ingredients}\n %>
+                <%= `Preparation -- ${d.preparation}\n %>
+                <%= `Place -- ${d.place} %>    
+            </li>
+        </ul>
+    <% }); %> 
+</div>
 <%- include('../partials/footer') %>

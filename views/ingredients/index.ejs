@@ -1,43 +1,11 @@
 <%- include('../partials/header') %>
-<h3>Hard Liquor</h3>
+<h3>Ingredients</h3>
 <div>
-    <% allIngr.hlEnum.forEach((hl) => { %> 
+    <% allIngr.forEach((i) => { %> 
     <ul>
-        <li> <%= hl %> </li>
+        <li> <%= `${i.ingrType} -- ${i.name}` %> </li>
     </ul>
     <% }); %>
 </div>
-<h3>Non-alcoholic</h3>
-<div>
-    <% allIngr.naEnum.forEach((hl) => { %> 
-    <ul>
-        <li> <%= hl %> </li>
-    </ul>
-    <% }); %>
-</div>
-<h3>Bitters</h3>
-<div>
-    <% allIngr.bEnum.forEach((hl) => { %> 
-    <ul>
-        <li> <%= hl %> </li>
-    </ul>
-    <% }); %>
-</div>
-<h3>Garnishes</h3>
-<div>
-    <% allIngr.gEnum.forEach((hl) => { %> 
-    <ul>
-        <li> <%= hl %> </li>
-    </ul>
-    <% }); %>
-</div>
-<h3>Other</h3>
-<div>
-    <% allIngr.oEnum.forEach((hl) => { %> 
-    <ul>
-        <li> <%= hl %> </li>
-    </ul>
-    <% }); %>
-</div>
-<a href="../ingredients/new">Add new ingredients</a>
+<a href="../ingredients/new">Add new ingredient</a>
 <%- include('../partials/footer') %>

@@ -1,16 +1,15 @@
-let hlEnum = ["Whiskey", "Tequila", "Vodka", "Gin", "Brandy", "Rum"];
-let naEnum = ['h'];
-let bEnum = ['h'];
-let gEnum = ["Olive", "Orange Peel", "Mint", "Lime"];
-let oEnum = ['h'];
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const ingredients = {
-    hlEnum,
-    gEnum,
-    naEnum,
-    bEnum,
-    oEnum
-}
-module.exports = {
-    ingredients
-}
+const ingredientSchema = new Schema ({
+    type: Object,
+    ingrType: {
+        type: String,
+        enum: ["Hard Liquor", "Non-alcoholic", "Bitters", "Garnish", "Other"],
+    },
+    name: {
+        type: String
+    }
+});
+
+module.exports = mongoose.model("Ingredient", ingredientSchema);

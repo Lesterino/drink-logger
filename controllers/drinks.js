@@ -3,7 +3,26 @@ const Drink = require('../models/drink')
 const index = async(req, res) => {
     try {
         const drinks = await Drink.find({});
-        res.status(200).json(drinks);
+        res.render('drinks/index', {
+            drinks
+        });
+    } catch(err) {
+        res.status(404);
+    }
+}
+
+const newDrink = async(req, res) => {
+    try {
+        res.render('drinks/new');
+    } catch(err) {
+        res.status(404);
+    }
+}
+
+const create = async(req, res) => {
+    try {
+        const newDrink = await Drink.create(req.body);
+        res.redirect('drinks');
     } catch(err) {
         res.status(404);
     }

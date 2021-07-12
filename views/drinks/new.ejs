@@ -1,2 +1,28 @@
 <%- include('../partials/header') %>
+<h1>Enter a new Drink</h1>
+<form action="/drinks" method="POST">
+<label>
+    Name:
+    <input type="text" name="name" />
+</label>
+<br />
+<label>
+    Ingredients:
+    <input type="text" name="ingredients" />
+</label>
+<br />
+<label>
+    Preparation:
+    <input type="text" name="preparation" />
+</label>
+<br />
+<label>
+    Place:
+    <input type="text" name="ingredients" />
+</label>
+<br />
+<label>
+    <input type="submit" value="Add Drink" />
+</label>
+</form>
 <%- include('../partials/footer') %>
