@@ -2,15 +2,18 @@ const Ingredient = require('../models/ingredient')
 
 const index = async(req, res) => {
     try {
-        const hardLiquor = await Ingredient.hlEnum;
-        const nonAlc = await Ingredient.naEnum;
-        const bitters = await Ingredient.bEnum;
-        const garnish = await Ingredient.gEnum;
-        const other = await Ingredient.oEnum;
-        const allIngr = {hardLiquor, nonAlc, bitters, garnish, other};
+        const allIngr = await Ingredient.ingredients;
         res.render('ingredients/index', {
             allIngr
         });
+    } catch(err) {
+        res.status(404);
+    }
+}
+
+const newIngredients = async(req, res) => {
+    try {
+        res.render('ingredients/new');
     } catch(err) {
         res.status(404);
     }
@@ -45,7 +48,7 @@ const deleteOne = async(req, res) => {
 
 module.exports = {
     index,
-    // new: newIngredient,
+    new: newIngredients,
     create,
     show,
     delete: deleteOne

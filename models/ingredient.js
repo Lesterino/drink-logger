@@ -4,10 +4,13 @@ let bEnum = ['h'];
 let gEnum = ["Olive", "Orange Peel", "Mint", "Lime"];
 let oEnum = ['h'];
 
-module.exports = {
+const ingredients = {
     hlEnum,
     gEnum,
     naEnum,
     bEnum,
     oEnum
+}
+module.exports = {
+    ingredients
 }
