@@ -18,7 +18,7 @@ const show = async(req, res) => {
     }
 }
 
-const create = (req, res) => {
+const create = async(req, res) => {
     try {
         const newPlace = await Place.create(req.body);
         res.status(201).json(newPlace);
@@ -27,7 +27,7 @@ const create = (req, res) => {
     }
 }
 
-const deleteOne = (req, res) => {
+const deleteOne = async(req, res) => {
     try {
         const deletedPlace = await Place.findByIdAndRemove(req.params.id);
         res.status(200).json(deletedPlace);
