@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<h1>Enter a new Place</h1>
+<form action="/places" method="POST">
+<label>
+    Name:
+    <input name="name" />
+</label>
+<br />
+<label>
+    Location:
+    <input name="location" />
+</label>
+<br />
+<label>
+    <input type="submit" value="Add Location" />
+</label>
+</form>
+<%- include('../partials/footer') %>

@@ -26,26 +26,21 @@ const ingredientSchema = new Schema ({
     }
 });
 
-const placeSchema = new Schema ({
-    type: Object,
-    name: {
-        type: String,
-        default: "N/A"
-    },
-    location: {
-        type: String,
-        default: "N/A"
-    }
-})
-
 const drinkSchema = new Schema ({
+
     type: Object,
+
     ingredients: ingredientSchema,
+
     preparation: {
         type: String,
         default: "N/A"
     },
-    place: placeSchema
+    
+    place: {
+        type: Object,
+        ref: "Place"
+    }
 })
 
 module.exports = mongoose.model("Drink", drinkSchema);

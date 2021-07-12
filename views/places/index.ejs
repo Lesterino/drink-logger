@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+<h3>All Places</h3>
+<div>
+    <% places.forEach((p) => { %> 
+    <ul>
+        <li> 
+            <%= `${p.name} -- ${p.location}` %> 
+        </li>
+    </ul>
+    <% }); %>
+</div>
+<a href="../places/new">Add new place</a>
+<%- include('../partials/footer') %>
