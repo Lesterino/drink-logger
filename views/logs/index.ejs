@@ -1,7 +1,15 @@
 <%- include('../partials/header') %>
 <h1>Logs</h1>
-<a href="new/">New Log</a>
+<a href="logs/new">New Log</a>
 <a href="drinks/">All drinks</a>
 <a href="ingredients/">All ingredients</a>
 <a href="places/">All places</a>
+
+<div>
+    <% logs.forEach((l) => { %>
+        <ol>
+            <li> <%= l %> </li>
+        </ol> 
+    <% }); %> 
+</div>
 <%- include('../partials/footer') %>

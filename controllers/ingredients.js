@@ -29,6 +29,13 @@ const create = async(req, res) => {
     }
 }
 
+const show = async(req, res) => {
+    const ing = await Ingredient.findById(req.params.id);
+    res.render('ingredients/show', {
+        ing
+    })
+}
+
 const deleteOne = async(req, res) => {
     try {
         const deletedIng = await Ingredient.findByIdAndDelete(req.body);
@@ -42,5 +49,6 @@ module.exports = {
     index,
     new: newIngredients,
     create,
+    show,
     delete: deleteOne
 }

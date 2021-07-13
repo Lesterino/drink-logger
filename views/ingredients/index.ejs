@@ -3,7 +3,7 @@
 <div>
     <% allIng.forEach((i) => { %> 
     <ul>
-        <li> <%= `${i.ingType} -- ${i.name}` %> </li>
+        <li> <%= `${i.ingType} -- ${i.name}` %> <a href="/ingredients/<%= i._id %>">Edit</a> </li>
     </ul>
     <% }); %>
 </div>

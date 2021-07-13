@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
-<form action="/drinks" method="POST">
+<form action="/logs" method="POST">
   <h1>Start a new Log</h1>
+  <h3>Add drink(s)</h3>
   <label>
     Drinks:
     <ul>
@@ -8,7 +9,7 @@
       <li>
         <input
           type="checkbox"
-          name="drink"
+          name="drinks"
           value="<%= `${i}` %>"
         />
         <%= `${i.name}` %>
@@ -16,12 +17,9 @@
       <% }); %>
     </ul>
   </label>
-  <br />
   <label>
-    Date:
-    <input type="text" name="name" />
+    <input type="submit" value="Add Log" />
   </label>
-  <br />
 </form>
 
 <%- include('../partials/footer') %>

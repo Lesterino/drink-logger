@@ -7,4 +7,5 @@ router.get('/new', drinksCtrl.new);
 router.post('/', drinksCtrl.create);
 // router.get('/:id', drinksCtrl.show);
 
+
 module.exports = router;
