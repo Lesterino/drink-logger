@@ -11,7 +11,7 @@
     <ul>
     <% ingList.forEach((i) => { %>
         <li>
-            <input type="checkbox" name="ingredients" value="<%= i._id %>" />
+            <input type="checkbox" name="ingredients" value="<%= `${i.ingType} -- ${i.name}` %>" />
             <%= `${i.ingType} -- ${i.name}` %> 
         </li> 
     <% }); %>
@@ -27,7 +27,7 @@
     Place:
     <select type="text" name="place">
         <% placeList.forEach((p) => { %>
-            <option value="<%= p._id %>">
+            <option value="<%= `${p.name} -- ${p.location}` %>">
                 <%= `${p.name} -- ${p.location}` %> </option>
         <% }); %>  
     </select>

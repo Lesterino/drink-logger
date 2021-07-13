@@ -19,7 +19,7 @@ const drinkSchema = new Schema ({
     },
 
     place: {
-        type: Object,
+        type: String,
         ref: "Place"
     }
 });

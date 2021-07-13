@@ -1,4 +1,5 @@
 const Log = require('../models/log')
+const Drink = require('../models/drink')
 
 const index = async(req, res) => {
     try {
@@ -6,6 +7,17 @@ const index = async(req, res) => {
         res.status(200).json(logs);
     } catch(err) {
         res.status(404);
+    }
+}
+
+const newLog = async(req, res) => {
+    try {
+        const drinkList = await Drink.find({});
+        res.render('logs/new', {
+            drinkList
+        });
+    } catch(err) {
+        res.status(404).json(err);
     }
 }
 
@@ -38,7 +50,7 @@ const deleteOne = async(req, res) => {
 
 module.exports = {
     index,
-    // new: newLog,
+    new: newLog,
     create,
     show,
     delete: deleteOne
