@@ -23,23 +23,47 @@ const create = async(req, res) => {
     try {
         const newIng = await Ingredient.create(req.body);
         console.log(newIng);
-        res.redirect('ingredients/')
+        res.redirect('ingredients')
     } catch (err) {
         res.status(404).json(err);
     }
 }
 
 const show = async(req, res) => {
-    const ing = await Ingredient.findById(req.params.id);
-    res.render('ingredients/show', {
-        ing
-    })
+    try {
+        const ing = await Ingredient.findById(req.params.id);
+        res.render('ingredients/show', {
+            ing
+        })
+    } catch(err) {
+        res.status(404).json(err);
+    }
+}
+
+const edit = async(req, res) => {
+    try {
+        res.render('ingredients/edit', {
+            ing: Ingredient.findById(req.params.id)
+        });
+    } catch(err) {
+        res.status(404).json(err);
+    }
+}
+
+const update = async(req, res) => {
+    try {
+        await Ingredient.findByIdAndUpdate(req.params.id, req.body);
+        res.redirect('/ingredients')
+    } catch(err) {
+        res.status(404).json(err);
+    }
+    
 }
 
 const deleteOne = async(req, res) => {
     try {
         const deletedIng = await Ingredient.findByIdAndDelete(req.body);
-        res.status(201).json(deletedIng);
+        res.redirect('/ingredients');
     } catch(err) {
         res.status(404).json(err);
     }
@@ -50,5 +74,7 @@ module.exports = {
     new: newIngredients,
     create,
     show,
+    edit,
+    update,
     delete: deleteOne
 }

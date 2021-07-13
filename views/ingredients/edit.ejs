@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<h3>Edit Ingredient</h3>
+    <form
+			action="/ingredients/<%= ing._id %>?_method=PUT"
+			method="POST"
+			autocomplete="off"
+		>
+        <label>
+            Type:
+            <select name="ingType">
+              <option value="Hard Liquor">Hard Liquor</option>
+              <option value="Non-alcoholic">Non-alcoholic</option>
+              <option value="Bitters">Bitters</option>
+              <option value="Garnish">Garnish</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <br />
+          <label>
+              Name:
+			<input type="text" name="name" value="<%= ing.name %>" />
+        </label>
+            <button type="submit">Apply Changes</button>
+    </form>
+<br />
+<%- include('../partials/footer') %>

@@ -2,4 +2,6 @@
 <h3>Ingredient <%= ing._id %> </h3>
 <div>Ingredient Type: <%= ing.ingType %> </div>
 <div>Name: <%= ing.name %> </div>
+<br />
+<a href="/ingredients/<%= ing._id %>/edit">Edit Ingredient</a>
 <%- include('../partials/footer') %>
