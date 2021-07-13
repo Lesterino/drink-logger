@@ -1,4 +1,6 @@
-const Drink = require('../models/drink')
+const Drink = require('../models/drink');
+const Ingredient = require('../models/ingredient');
+const Place = require('../models/place');
 
 const index = async(req, res) => {
     try {
@@ -13,7 +15,12 @@ const index = async(req, res) => {
 
 const newDrink = async(req, res) => {
     try {
-        res.render('drinks/new');
+        const ingList = await Ingredient.find({});
+        const placeList = await Place.find({});
+        res.render('drinks/new', {
+            ingList,
+            placeList
+        });
     } catch(err) {
         res.status(404);
     }
@@ -22,6 +29,7 @@ const newDrink = async(req, res) => {
 const create = async(req, res) => {
     try {
         const newDrink = await Drink.create(req.body);
+        console.log(newDrink);
         res.redirect('drinks');
     } catch(err) {
         res.status(404);
@@ -48,8 +56,8 @@ const deleteOne = async(req,res) => {
 
 module.exports = {
     index,
-    // new: newDrink,
-    // create,
+    new: newDrink,
+    create,
     show,
     delete: deleteOne
 }

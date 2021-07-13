@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const placeSchema = new Schema ({
-    type: Object,
     name: {
         type: String,
         default: "N/A"

@@ -3,8 +3,6 @@ const ingr = require('../models/ingredient');
 const Schema = mongoose.Schema;
 
 const drinkSchema = new Schema ({
-
-    type: Object,
     name: {
         type: String,
         default: "N/A"

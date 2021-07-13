@@ -2,9 +2,9 @@ const Ingredient = require('../models/ingredient')
 
 const index = async(req, res) => {
     try {
-        const allIngr = await Ingredient.find({});
+        const allIng = await Ingredient.find({});
         res.render('ingredients/index', {
-            allIngr
+            allIng
         });
     } catch(err) {
         res.status(404);
@@ -21,8 +21,8 @@ const newIngredients = async(req, res) => {
 
 const create = async(req, res) => {
     try {
-        const newIngr = await Ingredient.create(req.body);
-        console.log(newIngr);
+        const newIng = await Ingredient.create(req.body);
+        console.log(newIng);
         res.redirect('ingredients/')
     } catch (err) {
         res.status(404).json(err);
@@ -31,8 +31,8 @@ const create = async(req, res) => {
 
 const deleteOne = async(req, res) => {
     try {
-        const deletedIngr = await Ingredient.findByIdAndDelete(req.body);
-        res.status(201).json(deletedIngr);
+        const deletedIng = await Ingredient.findByIdAndDelete(req.body);
+        res.status(201).json(deletedIng);
     } catch(err) {
         res.status(404).json(err);
     }

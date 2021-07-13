@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ingredientSchema = new Schema ({
-    type: Object,
-    ingrType: {
+    ingType: {
         type: String,
         enum: ["Hard Liquor", "Non-alcoholic", "Bitters", "Garnish", "Other"],
     },
