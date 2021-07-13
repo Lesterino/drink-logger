@@ -8,10 +8,14 @@
 <br />
 <label>
     Ingredients:
-    <% ingList.forEach((i) => { %> 
-        <input type="checkbox" name="ingredients" value="<%= `${i.name}` %>" />
-        <%= `${i.ingType} -- ${i.name}` %> 
-    <% }); %> 
+    <ul>
+    <% ingList.forEach((i) => { %>
+        <li>
+            <input type="checkbox" name="ingredients" value="<%= i._id %>" />
+            <%= `${i.ingType} -- ${i.name}` %> 
+        </li> 
+    <% }); %>
+    </ul> 
 </label>
 <br />
 <label>
@@ -23,9 +27,9 @@
     Place:
     <select type="text" name="place">
         <% placeList.forEach((p) => { %>
-            <option value="<%= `${p.name}` %>">
+            <option value="<%= p._id %>">
                 <%= `${p.name} -- ${p.location}` %> </option>
-        <% )}; %>  
+        <% }); %>  
     </select>
 </label>
 <br />
