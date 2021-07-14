@@ -35,8 +35,7 @@ const create = async (req, res) => {
 const show = async (req, res) => {
   try {
     res.render("logs/show", {
-      log: await Log.findById(req.params.id),
-      // drink: await Drink.findById(req.params.id)
+      log: await Log.findById(req.params.id), //.populate('drinks'),
     });
   } catch (err) {
     res.status(404);
