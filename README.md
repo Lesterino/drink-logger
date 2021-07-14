@@ -4,7 +4,7 @@ Express app that allows one to track the various cocktails and drinks one has co
 were consumed at are included.
 
 
-Technologies Used: Node.js, Express, MongoDB, HTML, CSS
+Technologies Used: Node.js, Express, Mongoose, HTML, CSS
 
 Things to add:
 
