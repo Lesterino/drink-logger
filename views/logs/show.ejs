@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<h3>Log <%= log._id %> </h3>
+<h3><%= log.date %> </h3>
 <div>
     <ul>
     <% log.drinks.forEach((d) => { %> 
@@ -7,7 +7,6 @@
     <% }); %> 
     </ul>
 </div>
-<div>Date: <%= log.date %> </div>
 <br />
 <a href="/logs/<%= log._id %>/edit">Edit Log</a>
 <%- include('../partials/footer') %>

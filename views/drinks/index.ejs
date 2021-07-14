@@ -1,17 +1,12 @@
 <%- include('../partials/header') %>
-<h3>Drinks</h3>
+<h1>Drinks</h1>
 <div>
-    <% drinks.forEach((d) => { %>
-        <ul>
-            <li>
-                <%= `Name -- ${d.name}` %>
-                <%= `Ingredients -- ${d.ingredients}` %>
-                <%= `Preparation -- ${d.preparation}` %>
-                <%= `Place -- ${d.place}` %>
-                <a href='/drinks/<%= d._id %>'>Details</a>    
-            </li>
-        </ul>
-    <% }); %> 
+  <% drinks.forEach((d) => { %>
+  <ul>
+    <li><%= `${d.name}  |  ${d.place}` %> <a href="/drinks/<%= d._id %>">Details</a></li>
+  </ul>
+  <% }); %>
 </div>
+<br />
 <a href="../drinks/new">Add new Drink</a>
 <%- include('../partials/footer') %>

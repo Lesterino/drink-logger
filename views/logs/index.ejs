@@ -7,9 +7,9 @@
 
 <div>
     <% logs.forEach((l) => { %>
-        <ol>
+        <ul>
             <li> <%= l.date %> <a href="/logs/<%= l._id %>">Details</a> </li>
-        </ol> 
+        </ul> 
     <% }); %> 
 </div>
 <%- include('../partials/footer') %>
