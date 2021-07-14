@@ -9,7 +9,7 @@ const logSchema = new Schema ({
     date: {
         type: Date,
         default: () => {
-            return new Date()(+new Date())
+            return new Date()(+new Date());
         }
     }
 });
