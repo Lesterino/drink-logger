@@ -8,7 +8,7 @@
 <div>
     <% logs.forEach((l) => { %>
         <ol>
-            <li> <%= l %> <a href="/logs/<%= l._id %>">Details</a> </li>
+            <li> <%= l.date %> <a href="/logs/<%= l._id %>">Details</a> </li>
         </ol> 
     <% }); %> 
 </div>

@@ -36,6 +36,7 @@ const show = async (req, res) => {
   try {
     res.render("logs/show", {
       log: await Log.findById(req.params.id),
+      // drink: await Drink.findById(req.params.id)
     });
   } catch (err) {
     res.status(404);

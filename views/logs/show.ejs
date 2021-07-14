@@ -1,6 +1,12 @@
 <%- include('../partials/header') %>
 <h3>Log <%= log._id %> </h3>
-<div>Drinks: <%= log.drinks %></div>
+<div>
+    <ul>
+    <% log.drinks.forEach((d) => { %> 
+        <li>Drinks: <%= d %></li>
+    <% }); %> 
+    </ul>
+</div>
 <div>Date: <%= log.date %> </div>
 <br />
 <a href="/logs/<%= log._id %>/edit">Edit Log</a>
