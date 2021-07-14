@@ -4,8 +4,11 @@ const drinksCtrl = require('../controllers/drinks')
 
 router.get('/', drinksCtrl.index);
 router.get('/new', drinksCtrl.new);
+router.get('/:id', drinksCtrl.show);
 router.post('/', drinksCtrl.create);
-// router.get('/:id', drinksCtrl.show);
+router.delete('/:id', drinksCtrl.delete);
+router.get('/:id/edit', drinksCtrl.edit);
+router.put('/:id', drinksCtrl.update);
 
 
 module.exports = router;

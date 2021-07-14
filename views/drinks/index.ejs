@@ -7,7 +7,8 @@
                 <%= `Name -- ${d.name}` %>
                 <%= `Ingredients -- ${d.ingredients}` %>
                 <%= `Preparation -- ${d.preparation}` %>
-                <%= `Place -- ${d.place}` %>    
+                <%= `Place -- ${d.place}` %>
+                <a href='/drinks/<%= d._id %>'>Details</a>    
             </li>
         </ul>
     <% }); %> 

@@ -1,2 +1,9 @@
 <%- include('../partials/header') %>
+<h3>Drink <%= drink._id %> </h3>
+<div>Name: <%= drink.name %> </div>
+<div>Ingredients: <%= drink.ingredients %> </div>
+<div>Preparation: <%= drink.preparation %> </div>
+<div>Place: <%= drink.place %> </div>
+<br />
+<a href="/drinks/<%= drink._id %>/edit">Edit Drinks</a>
 <%- include('../partials/footer') %>

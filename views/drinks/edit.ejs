@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+<h3>Edit Drink</h3>
+<form action="/drinks/<%= drink._id %>?_method=PUT" method="POST">
+  <label>
+      Name:
+      <input type="text" name="name" />
+  </label>
+  <br />
+  <label>
+    Ingredients:
+    <br />
+        <ul>
+      <% ingList.forEach((i) => { %>
+        <li>
+      <input type="checkbox" name="ingredients" value="<%= i.name %>"><%= i.name %></option>
+    </li>
+      <% }); %>
+    </ul>
+    </select>
+  </label>
+  <br />
+  <label>
+    Preparation:
+    <input type="text" name="preparation" />
+  </label>
+  <br />
+  <label>
+    Place:
+    <select name="place" name="place">
+      <% placeList.forEach((p) => { %>
+      <option value="<%= p.name %>"><%= `${p.name} -- ${p.location}` %></option>
+      <% }); %>
+    </select>
+  </label>
+  <button type="submit">Apply Changes</button>
+</form>
+<%- include('../partials/footer') %>
