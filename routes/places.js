@@ -4,7 +4,10 @@ const placesCtrl = require('../controllers/places')
 
 router.get('/', placesCtrl.index);
 router.get('/new', placesCtrl.new);
+router.get('/:id', placesCtrl.show);
 router.post('/', placesCtrl.create);
-// router.get('/:id', drinksCtrl.show);
+router.delete('/:id', placesCtrl.delete);
+router.get('/:id/edit', placesCtrl.edit);
+router.put('/:id', placesCtrl.update);
 
 module.exports = router;

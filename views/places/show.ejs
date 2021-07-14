@@ -1,2 +1,7 @@
 <%- include('../partials/header') %>
+<h3>Ingredient <%= place._id %> </h3>
+<div>Name: <%= place.name %> </div>
+<div>Location: <%= place.location %> </div>
+<br />
+<a href="/places/<%= place._id %>/edit">Edit Ingredient</a>
 <%- include('../partials/footer') %>

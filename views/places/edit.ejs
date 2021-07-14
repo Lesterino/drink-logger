@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<h1>Enter a new Place</h1>
+<form action="/places/<%= place._id %>?_method=PUT" method="POST">
+  <label>
+    Name:
+    <input type="text" name="name" />
+  </label>
+  <br />
+  <label>
+    Location:
+    <input type="text" name="location" />
+  </label>
+  <br />
+    <button type="submit">Apply Changes</button>
+</form>
+<%- include('../partials/footer') %>

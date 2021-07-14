@@ -4,7 +4,7 @@
     <% places.forEach((p) => { %> 
     <ul>
         <li> 
-            <%= `${p.name} -- ${p.location}` %> 
+            <%= `${p.name} -- ${p.location}` %> <a href="/places/<%= p._id %>">Edit</a>
         </li>
     </ul>
     <% }); %>
