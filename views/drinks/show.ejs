@@ -1,8 +1,13 @@
 <%- include('../partials/header') %>
-<h3><%= drink.name %> </h3>
-<div>Ingredients: <%= drink.ingredients %> </div>
-<div>Preparation: <%= drink.preparation %> </div>
-<div>Place: <%= drink.place %> </div>
+<h3><%= drink.name %></h3>
+Ingredients:
+<ul>
+  <% drink.ingredients.map((i) => { %>
+  <li><%= i %></li>
+  <% }); %>
+</ul>
+<div>Preparation: <%= drink.preparation %></div>
+<div>Place: <%= drink.place %></div>
 <br />
 <a href="/drinks/<%= drink._id %>/edit">Edit Drinks</a>
 <%- include('../partials/footer') %>
