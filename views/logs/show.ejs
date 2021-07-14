@@ -1,9 +1,10 @@
 <%- include('../partials/header') %>
-<h3><%= log.date %> </h3>
+<h3><%= log.date.toLocaleDateString() %> </h3>
 <div>
+    Drinks:
     <ul>
     <% log.drinks.forEach((d) => { %> 
-        <li>Drinks: <%= d %></li>
+        <li><%= d %></li>
     <% }); %> 
     </ul>
 </div>

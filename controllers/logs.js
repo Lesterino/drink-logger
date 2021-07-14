@@ -23,6 +23,8 @@ const newLog = async (req, res) => {
 
 const create = async (req, res) => {
   try {
+    const today = new Date();
+    req.body.date = `${today.getMonth()}/${today.getDate()}/${today.getFullYear()}`;
     await Log.create(req.body);
     res.redirect("logs");
   } catch (err) {
