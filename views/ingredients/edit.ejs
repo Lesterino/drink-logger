@@ -1,10 +1,7 @@
 <%- include('../partials/header') %>
 <h3>Edit Ingredient</h3>
-    <form
-			action="/ingredients/<%= ing._id %>?_method=PUT"
-			method="POST"
-			autocomplete="off"
-		>
+<p><%= ing._id %> </p>
+    <form action="/ingredients/<%= ing._id %>?_method=PUT" method="POST">
         <label>
             Type:
             <select name="ingType">
@@ -18,7 +15,7 @@
           <br />
           <label>
               Name:
-			<input type="text" name="name" value="<%= ing.name %>" />
+			<input type="text" name="name" />
         </label>
             <button type="submit">Apply Changes</button>
     </form>

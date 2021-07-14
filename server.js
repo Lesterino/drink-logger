@@ -7,7 +7,7 @@ var methodOverride = require('method-override');
 require('dotenv').config();
 require('./config/database');
 
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 const logsRouter = require('./routes/logs');
 const drinksRouter = require('./routes/drinks');
 const ingredientsRouter = require('./routes/ingredients');
