@@ -60,7 +60,7 @@ const update = async (req, res) => {
 
 const deleteOne = async (req, res) => {
   try {
-    await Place.findByIdAndDelete(req.body);
+    await Place.findByIdAndRemove(req.params.id);
     res.redirect("/places");
   } catch (err) {
     res.status(404).json(err);

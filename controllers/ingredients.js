@@ -60,7 +60,7 @@ const update = async (req, res) => {
 
 const deleteOne = async (req, res) => {
   try {
-    await Ingredient.findByIdAndDelete(req.body);
+    await Ingredient.findByIdAndRemove(req.params.id);
     res.redirect("/ingredients");
   } catch (err) {
     res.status(404).json(err);

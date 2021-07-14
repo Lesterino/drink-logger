@@ -67,8 +67,8 @@ const update = async (req, res) => {
 
 const deleteOne = async (req, res) => {
   try {
-    const deletedDrink = await Drink.findByIdAndRemove(req.params.id);
-    res.status(200).json(deletedDrink);
+    await Drink.findByIdAndRemove(req.params.id);
+    res.redirect("/drinks");
   } catch (err) {
     res.status(404).json(err);
   }
