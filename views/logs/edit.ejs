@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<h3>Edit Log</h3>
+<form action="/logs/<%= log._id %>?_method=PUT" method="POST">
+    <label>
+      Ingredients:
+      <br />
+    <ul>
+        <% drinkList.forEach((d) => { %>
+          <li>
+            <input type="checkbox" name="drinks" value="<%= d %>"><%= d.name %>
+          </li>
+        <% }); %>
+      </ul>
+    </label>
+    <label>
+        Date:
+        <input type="datetime-local" name="date" />
+    </label>
+    <br />
+    <button type="submit">Apply Changes</button>
+  </form>
+<%- include('../partials/footer') %> 

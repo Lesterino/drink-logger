@@ -1,3 +1,7 @@
 <%- include('../partials/header') %>
-<div></div>
+<h3>Log <%= log._id %> </h3>
+<div>Drinks: <%= log.drinks %></div>
+<div>Date: <%= log.date %> </div>
+<br />
+<a href="/logs/<%= log._id %>/edit">Edit Log</a>
 <%- include('../partials/footer') %>

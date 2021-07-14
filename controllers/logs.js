@@ -46,6 +46,7 @@ const edit = async (req, res) => {
   try {
     res.render("logs/edit", {
       log: await Log.findById(req.params.id),
+      drinkList: await Drink.find({})
     });
   } catch (err) {
     res.status(404).json(err);
