@@ -1,6 +1,6 @@
 # Drink Logger
 
-Express app that allows one to track the various cocktails and drinks one has consumed that day. Details about the drink(s) as well as the date and place(s) they
+Express app that allows one to track the various cocktails and drinks one has consumed on a certain day. Details about the drink(s) as well as the date and place(s) they
 were consumed at are included.
 
 <img src="https://i.imgur.com/fQxJ20X.png" />
