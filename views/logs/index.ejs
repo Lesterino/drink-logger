@@ -1,15 +1,18 @@
 <%- include('../partials/header') %>
 <h1>Logs</h1>
-<a href="logs/new">New Log</a>
-<a href="drinks/">All drinks</a>
-<a href="ingredients/">All ingredients</a>
-<a href="places/">All places</a>
 
 <div>
-    <% logs.forEach((l) => { %>
-        <ul>
-            <li> <%= l.date.toLocaleDateString() %> <a href="/logs/<%= l._id %>">Details</a> </li>
-        </ul> 
-    <% }); %> 
+  <% logs.forEach((l) => { %>
+  <ul>
+    <li>
+      <%= l.date.toLocaleDateString() %>
+      <a href="/logs/<%= l._id %>">Details</a>
+    </li>
+  </ul>
+  <% }); %>
+</div>
+<br />
+<div>
+  <a href="logs/new">Create a New Log</a>
 </div>
 <%- include('../partials/footer') %>

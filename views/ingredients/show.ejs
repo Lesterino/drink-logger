@@ -1,6 +1,5 @@
 <%- include('../partials/header') %>
-<h3>Ingredient <%= ing._id %> </h3>
-<div>Ingredient Type: <%= ing.ingType %> </div>
+<h3><%= ing.ingType %></h3>
 <div>Name: <%= ing.name %> </div>
 <br />
 <a href="/ingredients/<%= ing._id %>/edit">Edit Ingredient</a>
