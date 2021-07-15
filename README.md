@@ -13,8 +13,7 @@ Technologies Used: Node.js, Express, Mongoose, HTML, CSS
 [Link to App](https://drink-logger-deploy.herokuapp.com/)
 
 Things to add:
-
-- Better "logging" functionality, potentially be able to create new drinks, ingredients, places, while on an open log
+- Better "logging" functionality, be able to create new drinks, ingredients, places, while on an open log
 - Images for places and drinks
 - map API for pinpointing locations for places
 - timestamps for logged drinks and places
