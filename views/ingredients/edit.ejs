@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <h3>Edit Ingredient</h3>
-<p><%= ing._id %> </p>
+<p><%= ing.name %> </p>
     <form action="/ingredients/<%= ing._id %>?_method=PUT" method="POST">
         <label>
             Type:
@@ -17,7 +17,9 @@
               Name:
 			<input type="text" name="name" />
         </label>
+        <div>
             <button type="submit">Apply Changes</button>
+          </div>
     </form>
     <br />
     <form
@@ -25,6 +27,8 @@
 					id="delete-form"
 					method="POST"
 				>
-					<button type="submit">DELETE INGREDIENT</button>
+					<div>
+            <button type="submit">DELETE INGREDIENT</button>
+          </div>
 				</form>
 <%- include('../partials/footer') %>

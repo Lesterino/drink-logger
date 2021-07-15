@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 <h3>Edit Log</h3>
 <form action="/logs/<%= log._id %>?_method=PUT" method="POST">
+  <div>
     <label>
       Drinks:
       <br />
@@ -12,10 +13,13 @@
         <% }); %>
       </ul>
     </label>
+  </div>
+  <div>
     <label>
         Date:
         <input type="datetime-local" name="date" />
     </label>
+  </div>
     <br />
     <button type="submit">Apply Changes</button>
   </form>
