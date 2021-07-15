@@ -18,3 +18,4 @@ Things to add:
 - Map API for pinpointing locations for places
 - Timestamps for logged drinks and places
 - Reviews for drinks and places
+- measurements for ingredients
