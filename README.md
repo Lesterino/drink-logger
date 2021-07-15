@@ -15,5 +15,6 @@ Technologies Used: Node.js, Express, Mongoose, HTML, CSS
 Things to add:
 - Better "logging" functionality, be able to create new drinks, ingredients, places, while on an open log
 - Images for places and drinks
-- map API for pinpointing locations for places
-- timestamps for logged drinks and places
+- Map API for pinpointing locations for places
+- Timestamps for logged drinks and places
+- Reviews for drinks and places
