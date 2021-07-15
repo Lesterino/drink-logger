@@ -8,7 +8,7 @@ were consumed at are included.
 <img src="https://i.imgur.com/oSk5Bu4.png" />
 <img src="https://i.imgur.com/9qJWC6X.png" />
 
-Technologies Used: Node.js, Express, Mongoose, HTML, CSS
+Technologies Used: Node.js, Express, Mongoose, HTML, CSS, Bootstrap
 
 [Link to App](https://drink-logger-deploy.herokuapp.com/)
 
