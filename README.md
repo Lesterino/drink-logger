@@ -19,3 +19,4 @@ Things to add:
 - Timestamps for logged drinks and places
 - Reviews for drinks and places
 - measurements for ingredients
+- User functionality
